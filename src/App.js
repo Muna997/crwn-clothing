@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import Directory from "./components/directory/directory.component.jsx";
+const App = () => {
+  const categories = [
+    {
+      id: 1,
+      title: "hats",
+      imageUrl: "https://picsum.photos/seed/hats/400/400",
+    },
+    {
+      id: 2,
+      title: "jackets",
+      imageUrl: "https://picsum.photos/seed/jackets/400/400",
+    },
+    {
+      id: 3,
+      title: "sneakers",
+      imageUrl: "https://picsum.photos/seed/sneakers/400/400",
+    },
+    {
+      id: 4,
+      title: "womens",
+      imageUrl: "https://picsum.photos/seed/womens/400/400",
+    },
+    {
+      id: 5,
+      title: "mens",
+      imageUrl: "https://picsum.photos/seed/mens/400/400",
+    },
+  ];
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+  return <Directory categories={categories} />;
+};
 
 export default App;
